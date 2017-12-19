@@ -62,9 +62,7 @@ class BleffBot:
         chat_id = update.message.chat_id
         if self.check_chat(chat_id):
             if update.message.text.lower().startswith('кто такой'):
-                bot.sendMessage(chat_id=chat_id, text='Oleg Tinkov is a Russian entrepreneur and cycling sponsor. According to Forbes, in 2014 he was ranked 1210 in the list of the wealthiest people in the world, on the list of the richest businessmen in ...')
-            elif update.message.text.lower().startswith('как тебя'):
-                bot.sendMessage(chat_id=chat_id, text='Меня зовут бот пин-процердурщик. Готов ответить на ваши вопросы.')
+                #bot.sendMessage(chat_id=chat_id, text='yo')
             else:
                 self.active_chats[chat_id].receive_input(update.message.text)
 
